@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.DemoWorkShop.testCases.TestCase1">
+      <class name="Grid.Prac">
         <methods>
-          <include name="initialSetup"/>
-          <include name="scenario1"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- org.DemoWorkShop.testCases.TestCase1 -->
+      </class> <!-- Grid.Prac -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,15 +1,20 @@
 package org.DemoWorkShop.testCases;
 
-import org.DemoWorkshop.base.BaseConfigurations;
+import java.net.MalformedURLException;
+
+//import org.DemoWorkshop.base.BaseConfigurations;
 import org.DemoWorkshop.pageObjects.ComputerMenu;
 import org.DemoWorkshop.pageObjects.DesktopPage;
 import org.DemoWorkshop.pageObjects.HomePage;
 import org.DemoWorkshop.pageObjects.ProductPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class TestCase1 extends BaseConfigurations {
+import Grid.Prac2;
+
+public class TestCase1 extends Prac2 {
 	
 	HomePage homeObj;
 	ComputerMenu computerObj;
@@ -17,9 +22,10 @@ public class TestCase1 extends BaseConfigurations {
 	ProductPage productObj;
 	WebDriver driver;
 	
+	@Parameters({"Port"})
 	@BeforeClass
-	public void initialSetup() {
-		driver = getDriver();
+	public void initialSetup(String Port) throws MalformedURLException {
+		driver = setUp(Port);
 		homeObj = new HomePage(driver);
 		computerObj = new ComputerMenu(driver);
 		desktopObj = new DesktopPage(driver);
@@ -33,5 +39,7 @@ public class TestCase1 extends BaseConfigurations {
 		desktopObj.buttonClick();
 		productObj.verifyButton();
 	}
+	
+	
 	
 }
