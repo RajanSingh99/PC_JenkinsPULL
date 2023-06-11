@@ -23,7 +23,7 @@ public class Prac2 {
 	    {     
 	        if(Port.equalsIgnoreCase("5555"))
 	        {
-	            nodeURL = "http://192.168.1.204:4444/wd/hub";
+	            nodeURL = "http://192.168.1.206:4444/wd/hub";
 	            System.out.println("Chrome Browser Initiated");
 	            DesiredCapabilities capabilities = DesiredCapabilities.chrome();            
 	            capabilities.setBrowserName("chrome");
@@ -39,7 +39,7 @@ public class Prac2 {
 	        else
 	            if(Port.equalsIgnoreCase("6666"))
 	            {
-	                nodeURL = "http://192.168.1.204:4444/wd/hub";
+	                nodeURL = "http://192.168.1.206:4444/wd/hub";
 	                System.out.println("Microsoft Edge Browser Initiated");
 	                DesiredCapabilities capabilities1 = DesiredCapabilities.firefox();
 	                capabilities1.setBrowserName("MicrosoftEdge");
